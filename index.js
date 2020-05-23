@@ -62,11 +62,11 @@ searchBar.addEventListener("keyup", function (e) {
 
 // Tabbed content
 const tabs = document.querySelector(".tabs");
-const panels = document.querySelectorAll("panel");
+const panels = document.querySelectorAll(".panel");
 
 tabs.addEventListener("click", function (e) {
   if (e.target.tagName == "LI") {
-    const targetPanel = document.querySelector(e.target.dataSet.target);
+    const targetPanel = document.querySelector(e.target.dataset.target);
     panels.forEach(function (panel) {
       if (panel == targetPanel) {
         panel.classList.add("active");
